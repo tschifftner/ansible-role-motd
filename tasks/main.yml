@@ -1,0 +1,6 @@
+
+- include: install.yml
+  tags: ['motd-install']
+
+- include: configure.yml
+  tags: ['motd-configure']

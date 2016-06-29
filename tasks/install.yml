@@ -1,0 +1,27 @@
+---
+
+- name: Install required apt packages
+  apt:
+    pkg: '{{ item }}'
+    state: installed
+  with_items:
+    - 'lsb-release'
+    - 'figlet'
+
+- name: Ensure update dir is present
+  file:
+    path: /etc/update-motd.d/
+    state: directory
+
+- name: Set motd files
+  template:
+    src: '{{ item }}'
+    dest: '/etc/update-motd.d/{{ item }}'
+    mode: '0755'
+  with_items: '{{ motd_files }}'
+
+#- name: Ensure motd symlink exists
+#  file:
+#    src: /var/run/motd
+#    dest: /etc/motd
+#    state: link
