@@ -6,7 +6,7 @@ Installs motd (message of the day) on Debian/Ubuntu linux servers.
 
 ## Requirements
 
-ansible 2.0+
+None
 
 ## Dependencies
 
@@ -31,7 +31,7 @@ $ ansible-galaxy install tschifftner.motd
 ## Supported OS
 Ansible          | Debian Jessie    | Ubuntu 14.04
 :--------------: | :--------------: | :-------------:
-2.0              | Yes              | Yes
+2.1              | Yes              | Yes
 
 ## License
 
@@ -39,4 +39,4 @@ MIT / BSD
 
 ## Author Information
 
- - Tobias Schifftner, @tschifftner
+ - [Tobias Schifftner](https://twitter.com/tschifftner), [ambimax® GmbH](https://www.ambimax.de)
